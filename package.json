@@ -1,0 +1,9 @@
+{
+  "name": "progressive-image",
+  "version": "0.1.0",
+  "description": "Start with a low-res image, swap to a high-res on Intersection or on demand",
+  "main": "index.js",
+  "repository": "https://github.com/korokd/progressive-image",
+  "author": "Diogo Korok <korokd@protonmail.ch>",
+  "license": "MIT"
+}
