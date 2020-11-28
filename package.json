@@ -7,10 +7,14 @@
   "author": "Diogo Korok <korokd@protonmail.ch>",
   "license": "MIT",
   "devDependencies": {
+    "elm-hot": "^1.1.5",
+    "node-elm-compiler": "^5.0.5",
     "parcel": "^1.12.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@power-elements/lazy-image": "^2.2.0"
+  },
   "scripts": {
-    "start": "parcel"
+    "start": "parcel index.html *.png"
   }
 }
