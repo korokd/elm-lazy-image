@@ -1,19 +1,17 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, img, node)
-import Html.Attributes exposing (alt, attribute, src)
+import Html exposing (img)
+import Html.Attributes exposing (alt, src)
+import LazyImage
 
 
 main =
-    node "lazy-image"
-        [ src "./high-res.png"
-        , alt "Cool Background: Blue Particles on Red"
-        ]
-        [ img
-            [ attribute "slot" "placeholder"
-            , src "./low-res.png"
-            , alt "Placeholder"
-            ]
-            []
-        ]
+    LazyImage.view
+        { required = { src_ = "./high-res.png", alt_ = "Cool Background: Blue Particles on Red" }
+        , other = []
+        }
+        { element = img
+        , attributes = [ src "./low-res.png", alt "Cool Background: Blue Particles on Red (Low Res)" ]
+        , children = []
+        }
